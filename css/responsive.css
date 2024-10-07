@@ -30,6 +30,13 @@
         padding-bottom: 0px;
     }
 
+    .header-context.header-bonus > h1{
+        font-size: 34px;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        line-height: 50px;
+    }
+
     .header-context > p {
         font-size: 13px;
         letter-spacing: 0.1px;
@@ -158,8 +165,9 @@
     }
 
     .list-item-feature > ul > li {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 18px;
+        margin: 2px;
     }
 
     p.top-bonus-p-top {

@@ -265,7 +265,7 @@ p.top-bonus-p-bottom {
   font-weight: var(--fw-600);
   font-size: var(--font-size-p-4);
   color: rgb(49, 48, 48);
-  line-height: 30px;
+  line-height: 20px;
 }
 
 .list-item-feature > ul > li > img{
@@ -798,6 +798,15 @@ h2.js-block-title {
   line-height: 32px;
 }
 
+.text-page > h4 {
+  font-size: var(--font-size-p-6);
+  font-weight: var(--fw-700);
+  letter-spacing: -0.1px;
+  word-spacing: 1.2px;
+  margin-bottom: 18px;
+  line-height: 32px;
+}
+
 .text-sub-p > p {
   font-size: var(--font-size-p-2);
   font-weight: var(--fw-500);
@@ -806,6 +815,17 @@ h2.js-block-title {
   margin-bottom: 18px;
   line-height: 24px;
   color: #3b3a3a;
+}
+
+.text-sub-p > h4 {
+  font-size: var(--font-size-p-6);
+  font-weight: var(--fw-700);
+  letter-spacing: -0.1px;
+  word-spacing: 1.2px;
+  margin-bottom: 18px;
+  line-height: 32px;
+  color: rgb(0, 0, 0);
+  font-family: var(--font-1-inter) !important;
 }
 
 .text-sub-p > ul > li{
@@ -846,3 +866,54 @@ h2.js-block-title {
 /* -------------------------------
   Sub Pages End
 ---------------------------------- */
+
+
+
+/* ----------------------------------
+  Welcome Bonus Start
+--------------------------------- */
+.header-bg.header-bonus-page {
+  margin: 0px;
+}
+
+.header-context.header-bonus > h1 {
+  color: var(--white-color);
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--fw-700);
+  letter-spacing: 0.2px;
+  padding-bottom: 15px;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+
+.subpage-section{
+  margin-top: -100px;
+}
+
+.game-text-white{
+  padding: 100px 0px 0px 0px;
+}
+
+.game-promotion-text > p, ul > li{
+  font-size: var(--font-size-p-2);
+  font-weight: var(--fw-500);
+  letter-spacing: -0.1px;
+  word-spacing: 1px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  color: #3b3a3a;
+}
+
+.game--text P {
+  font-size: var(--font-size-p-6);
+  font-weight: var(--fw-700);
+  letter-spacing: -0.1px;
+  word-spacing: 1.2px;
+  margin-bottom: 18px;
+  line-height: 32px;
+  color: rgb(0, 0, 0);
+  font-family: var(--font-1-inter) !important;
+}
+/* ----------------------------------
+  Welcome Bonus Start
+--------------------------------- */

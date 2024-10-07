@@ -2,25 +2,194 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="Best Online Casino In Canada 2024. Join Canada's top online casino for 2024 and sign up today for an unforgettable gaming experience!">
-            <meta name="keywords" content="TonyBet Canada Review, TonyBet Online Casino Bonuses, TonyBet Canada No Deposit Bonus, TonyBet Casino Games Canada, TonyBet Canada Casino in 2024">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Best Online Casino In Canada 2024. Join Canada's top online casino for 2024 and sign up today for an unforgettable gaming experience!">
+        <meta name="keywords" content="TonyBet Canada Review, TonyBet Online Casino Bonuses, TonyBet Canada No Deposit Bonus, TonyBet Casino Games Canada, TonyBet Canada Casino in 2024">
 
-            <!-- =============== Title ============== -->
-            <title>TonyBet</title>
-            <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon">
+        <!-- =============== Title ============== -->
+        <title>TonyBet</title>
+        <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon">
 
-            <!-- =============== Custom Link ================= -->
-            <link rel="stylesheet" href="css/style.css">
-            <link rel="stylesheet" href="css/responsive.css">
-            <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- =============== Custom Link ================= -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
-            <!-- =============== Google Fonts ============== -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- =============== Google Fonts ============== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+         <!-- ================= Internal Popup CSS ========================= -->
+         <style>
+            .open-modal-btn {
+              background-color: #004f9e;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              font-size: 16px;
+              font-weight: bold;
+              cursor: pointer;
+              color: #fff;
+              margin-bottom: 20px;
+            }
+
+            .open-modal-btn:hover {
+              background-color: #002951;
+            }
+          
+            .registration-container {
+              background: white;
+              max-width: 400px;
+              width: 90%;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+              display: none;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 10000001;
+            }
+          
+            .registration-header {
+              padding: 20px 0px;
+            }
+          
+            .close-btn {
+              background: #000;
+              color: #fff;
+              border: none;
+              font-size: 20px;
+              cursor: pointer;
+              float: right;
+            }
+
+            button.close-btn {
+                color: #000000;
+                background: transparent;
+                font-size: 50px;
+                position: relative;
+                top: -50px;
+                right: -10px;
+            }
+          
+            .form-group {
+              margin-bottom: 20px;
+            }
+          
+            .form-group label {
+              display: block;
+              margin-bottom: 5px;
+              font-weight: bold;
+              color: #333;
+            }
+          
+            .form-group input {
+              width: calc(100% - 20px);
+              padding: 10px;
+              margin: 0 auto;
+              display: block;
+              font-size: 14px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+          
+            .form-group input:focus {
+              outline: none;
+              border-color: #888;
+            }
+          
+            .submit-btn {
+              background-color: #FF530B!important;
+              border: none;
+              color: #fff;
+              padding: 12px 20px !important;
+              font-size: 17px !important;
+              border-radius: 0px !important;
+              letter-spacing: 0px !important;
+              cursor: pointer;
+              width: 100%;
+              font-weight: bold;
+            }
+          
+            .submit-btn:hover {
+              background-color: #c4420b;
+            }
+          
+            .overlay {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: #010608f1;
+              z-index: 100000;
+            }
+        </style>
     </head>
     <body>
+
+        <!-- ==================== Registration PopUp Html & JS Start ====================== -->
+        <div class="registration-container" id="registration-modal">
+            <div class="registration-header">
+                <button class="close-btn" onclick="closeRegistration()">×</button>
+            </div>
+            
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="username">User name:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+            
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+  
+        <!-- === Overlay for modal background == -->
+        <div class="overlay" id="modal-overlay"></div>
+
+        <script>
+            // Open the registration modal and show the overlay
+            function openRegistration() {
+            document.getElementById('registration-modal').style.display = 'block';
+            document.getElementById('modal-overlay').style.display = 'block';
+            }
+        
+            // Close the registration modal and hide the overlay
+            function closeRegistration() {
+            document.getElementById('registration-modal').style.display = 'none';
+            document.getElementById('modal-overlay').style.display = 'none';
+            }
+        
+            // Form submission logic
+            document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+        
+            alert('Registration successful! We will contact you shortly.');
+        
+            closeRegistration(); // Close modal after successful registration
+            });
+        </script>
+        <!-- ==================== Registration PopUp Html & JS End ====================== -->
+
+
+
         <!-- ============================ Header Start ============================ -->
          <header class="header-section">
             <div class="header-bg">
@@ -72,7 +241,7 @@
                         </div>
 
                         
-                        <a href="https://tonybet.ca/casino" target="_blank">
+                        <a onclick="openRegistration()">
                             <button class="btn-sign-up">Sign Up</button>
                         </a>
                     </div>
@@ -99,7 +268,7 @@
                         <!-- ==== Brand logo & name ==== -->
                         <div class="col-md-3 col-6 brand-name-border-2">
                             <div class="brand-game-logo">
-                                <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank">
+                                <a onclick="openRegistration()">
 
                                     <img src="images/brand-1.png" alt="Tonybet">
 
@@ -142,13 +311,13 @@
                         <div class="col-md-3 col-6">
                             <div class="button-area  top-button-sm  brand-name-border-sm-3">
                                 <div class="top-list-btn">
-                                    <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank">
+                                    <a onclick="openRegistration()">
                                         <button>Play Now</button>
                                     </a>
                                 </div>
 
                                 <div class="top-list-TC">
-                                    <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank">
+                                    <a onclick="openRegistration()">
                                         <p>18+ | Full Terms & Conditions Apply</p>
                                     </a>
                                 </div>
@@ -172,7 +341,7 @@
                             <div class="crash-content">
                                 <h2>POPULAR CRASH <br>GAMES</h2>
                                 <p>Enjoy a thrilling 10% cashback every week at InstantCasino, where exciting crash games like Bone Bonanza, Elvis Frog in Vegas, Gold Crash etc await with massive rewards. Whether you're a seasoned player or new to the action, each game offers a unique experience to keep you on the edge of your seat. Join now and benefit from secure transactions, fast payouts, and around-the-clock support, ensuring a seamless gaming experience. InstantCasino prioritizes your safety and satisfaction, making it the perfect choice for players seeking excitement, reliability, and unbeatable rewards every time.</p>
-                                <a href="https://tonybet.ca/casino/slots" target="_blank">
+                                <a onclick="openRegistration()">
                                     <button class="btn-sign-up">Play Now</button>
                                 </a>
                             </div>
@@ -219,11 +388,11 @@
                                         </div>
 
                                         <h3 class="title-md card-title">
-                                            <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link:hover">Joker Joker</a>
+                                            <a  href="welcome-bonus.html" class="link:hover">Joker Joker</a>
                                         </h3>
 
                                         <p class="label-md card-author">
-                                            by <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link">@Tonybet</a>
+                                            by <a  href="welcome-bonus.html" class="link">@Tonybet</a>
                                         </p>
 
                                         <p class="card-text">Over 2,500+ Games</p>
@@ -250,11 +419,11 @@
                                         </div>
 
                                         <h3 class="title-md card-title">
-                                            <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link:hover">Sugar Rush</a>
+                                            <a  href="welcome-bonus.html" class="link:hover">Sugar Rush</a>
                                         </h3>
 
                                         <p class="label-md card-author">
-                                            by <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link">@Tonybet</a>
+                                            by <a  href="welcome-bonus.html" class="link">@Tonybet</a>
                                         </p>
 
                                         <p class="card-text">Over 2,500+ Games</p>
@@ -281,11 +450,11 @@
                                         </div>
 
                                         <h3 class="title-md card-title">
-                                            <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link:hover">John Hunter</a>
+                                            <a  href="welcome-bonus.html" class="link:hover">John Hunter</a>
                                         </h3>
 
                                         <p class="label-md card-author">
-                                            by <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link">@Tonybet</a>
+                                            by <a  href="welcome-bonus.html" class="link">@Tonybet</a>
                                         </p>
 
                                         <p class="card-text">Over 2,500+ Games</p>
@@ -312,11 +481,11 @@
                                         </div>
 
                                         <h3 class="title-md card-title">
-                                            <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link:hover">Bigger Bass</a>
+                                            <a href="welcome-bonus.html" class="link:hover">Bigger Bass</a>
                                         </h3>
 
                                         <p class="label-md card-author">
-                                            by <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link">@Tonybet</a>
+                                            by <a href="welcome-bonus.html" class="link">@Tonybet</a>
                                         </p>
 
                                         <p class="card-text">Over 2,500+ Games</p>
@@ -343,11 +512,11 @@
                                         </div>
 
                                         <h3 class="title-md card-title">
-                                            <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link:hover">Sweet Kingdom</a>
+                                            <a  href="welcome-bonus.html" class="link:hover">Sweet Kingdom</a>
                                         </h3>
 
                                         <p class="label-md card-author">
-                                            by <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank" class="link">@Tonybet</a>
+                                            by <a  href="welcome-bonus.html" class="link">@Tonybet</a>
                                         </p>
 
                                         <p class="card-text">Over 2,500+ Games</p>
@@ -396,7 +565,7 @@
                         <div class="col-md-3 col-6 brand-name-border-2">
 
                             <div class="brand-game-logo">
-                                <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank">
+                                <a onclick="openRegistration()">
 
                                     <img src="images/tonybet-logo-light.png" alt="Unibet">
 
@@ -439,13 +608,13 @@
                         <div class="col-md-3 col-6">
                             <div class="button-area  top-button-sm  brand-name-border-sm-3">
                                 <div class="top-list-btn">
-                                    <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank">
+                                    <a onclick="openRegistration()">
                                         <button>Play Now</button>
                                     </a>
                                 </div>
 
                                 <div class="top-list-TC">
-                                    <a href="https://tonybet.ca/promotions/welcome-casino" target="_blank">
+                                    <a onclick="openRegistration()">
                                         <p>18+ | Full Terms & Conditions Apply</p>
                                     </a>
                                 </div>
