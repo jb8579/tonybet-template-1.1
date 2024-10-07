@@ -777,7 +777,7 @@ p.footer-p-note > a:hover{
   clip-path: none;
   height: auto;
   padding: 15px 0px;
-  margin: 0px;
+  margin-bottom: 80px;
   border-bottom-right-radius: 0px !important;
 }
 
