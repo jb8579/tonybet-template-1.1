@@ -751,6 +751,7 @@ p.footer-p-note > a:hover{
   letter-spacing: 0.2px;
   font-weight: 400;
   margin: 0px;
+  text-align: center;
 }
 
 .copyright-context > p > a{
